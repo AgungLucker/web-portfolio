@@ -24,7 +24,7 @@ const Footer = () => {
 
             </div> 
             <div className="py-6 mt-6 md:mt-0">
-                <p className="text-black">©2024 Muhammad Aufa Farabi. All rights reserved.</p>
+                <p className="text-black">©2025 Muhammad Aufa Farabi. All rights reserved.</p>
             </div>
         </div>
 

@@ -7,6 +7,9 @@ const techStackIcons = {
   Nextjs:"/next-js.svg",
   React:"/react.svg",
   Tailwind:"/tailwind-css-2.svg",
+  Go: "/Go.svg",
+  Expressjs: "/Expressjs.png",
+  Javascript: "/javascript-logo-svgrepo-com.svg"
 
 };
 

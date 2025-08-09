@@ -26,6 +26,22 @@ const ProjectsData = [
     tab: ["Projects"],
     techStack: ["React", "Nextjs", "Tailwind"],
   },
+    {
+    id: 4,
+    title: "WebBrewery",
+    description: "Little Alchemy 2 recipe finder and visualizer app",
+    image: "/images/WebBrewery.png",
+    tab: ["Projects"],
+    techStack: ["React", "Go", "Tailwind"],
+  },
+   {
+    id: 5,
+    title: "Anim'All",
+    description: "Pet lost and found app for Jatinangor area",
+    image: "/images/Animall.png",
+    tab: ["Projects"],
+    techStack: ["Javascript", "Expressjs"],
+  },
 
 ];
 const Activities = () => {

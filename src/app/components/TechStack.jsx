@@ -9,8 +9,10 @@ import PythonIcon from "../../../public/python-5.svg"
 import CIcon from "../../../public/c-1.svg"
 import JavaIcon from "../../../public/java-4.svg"
 import NextJSIcon from "../../../public/next-js.svg"
-import GithubIcon from "../../../public/github-icon.svg"
-import GitIcon from "../../../public/git-icon.svg"
+import nodeJsIcon from "../../../public/nodejs.svg"
+import Cplus2 from "../../../public/cplus2.svg"
+import mySQLIcon from "../../../public/mysql.svg"
+import MongoDBIcon from "../../../public/mongodb.svg"
 
 const techStacks = [
   {name: "HTML", icon:HTMLIcon},
@@ -22,8 +24,10 @@ const techStacks = [
   {name: "Python", icon:PythonIcon},
   {name: "C", icon:CIcon},
   {name: "Java", icon:JavaIcon},
-  {name: "Github", icon:GithubIcon},
-  {name: "Git", icon:GitIcon},
+  {name: "C++", icon:Cplus2},
+  {name: "Node.js", icon:nodeJsIcon},
+  {name: "MySQL", icon:mySQLIcon},
+  {name: "MongoDB", icon:MongoDBIcon},
 ];
 const TechStack = () => {
   return (

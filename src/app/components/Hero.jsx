@@ -20,8 +20,8 @@ const Hero = () => {
             <span className="text-gray-500">A </span>
             <TypeAnimation 
               sequence={[
-                "Software Developer Enthusiast", 3000, 
-                "Cybersecurity Enthusiast", 3000,
+                "Software Development Enthusiast", 3000, 
+                "Data Enthusiast", 3000,
               ]}
               wrapper="span"
               speed={70}
@@ -29,8 +29,8 @@ const Hero = () => {
             />
           </p>
           <p className="text-zinc-900 py-3 text-sm sm:text-base leading-relaxed w-full md:w-3/4">I am currently pursuing a degree in Informatics Engineering at ITB, where I am honing my skills 
-            in various fields within computer science. My academic focus is primarily on Software Engineering, with a deep passion for both 
-            Web Development and Cybersecurity.</p>
+            in various fields within computer science. My academic focus is primarily on Software Engineering, particularly on Web Development, and also currently growing my skills on Data Analytics
+            .</p>
           <div className="flex justify-start mt-2 mb-8">
             <a
               href=""

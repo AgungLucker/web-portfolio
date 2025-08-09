@@ -5,8 +5,8 @@ const Experiences = () => {
     const experiences = [
         {
             job: "HMIF ITB",
-            role: "Intern Staff of People Management Division",
-            duration: "October 2024 - Now"
+            role: "Staff of Career Development Division",
+            duration: "July 2025 - Now"
         },
         {
             job: "Olimpiade KM ITB",
