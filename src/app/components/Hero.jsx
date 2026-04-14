@@ -1,42 +1,49 @@
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const Hero = () => {
+  const revealRef = useScrollReveal();
+
   return (
-    <section id="Hero" className="h-auto  bg-[#fafbf5] rounded-b-[60px] px-4 md:px-10 md:pt-10 pb-2 flex flex-col items-center">
+    <section 
+      id="Hero" 
+      ref={revealRef}
+      className="reveal h-auto bg-[#fafbf5] dark:bg-gray-950 rounded-b-[60px] px-4 md:px-10 md:pt-10 pb-2 flex flex-col items-center transition-colors duration-300 mt-0 mb-12"
+    >
       <div className="flex flex-col items-start justify-between px-4 md:px-10 py-8 pb-4 w-full mt-12">
         <div className="flex-shrink-0 flex items- justify-start ">
-            <div className="rounded-full bg-[#36454F] w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] overflow-hidden flex items-center justify-center">
-              <Image src="/images/profile.png" width={60} height={40} className="object-cover"/>
+            <div className="rounded-full bg-[#36454F] w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] overflow-hidden flex items-center justify-center hover:scale-110 transition-transform duration-300">
+              <Image src="/images/profile.png" alt="Profile" width={60} height={40} className="object-cover"/>
             </div>
           </div>
         <div className="flex flex-col place-content w-full md:w-7/8 mt-5 ">
-          <p className="text-gray-500 mb-1 text-lg font-semibold">Hi there! I am</p>
-          <h1 className="text-cyan-950 font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-6xl mb-4">MUHAMMAD AUFA FARABI</h1>
+          <p className="text-gray-500 dark:text-gray-400 mb-1 text-lg font-semibold transition-colors duration-300">Hi there! I am</p>
+          <h1 className="text-cyan-950 dark:text-white font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-6xl mb-4 transition-colors duration-300">MUHAMMAD AUFA FARABI</h1>
           <p
-          className="text-[#99c221] mb-8 font-bold text-base sm:text-lg"
+          className="text-[#99c221] dark:text-green-400 mb-8 font-bold text-base sm:text-lg transition-colors duration-300"
           >
-            <span className="text-gray-500">A </span>
+            <span className="text-gray-500 dark:text-gray-400">The </span>
             <TypeAnimation 
               sequence={[
-                "Software Development Enthusiast", 3000, 
-                "Data Enthusiast", 3000,
+                "Software Developer", 3000, 
+                "3rd Year Informatics Student at ITB", 3000,
               ]}
               wrapper="span"
               speed={70}
               repeat={Infinity}
             />
           </p>
-          <p className="text-zinc-900 py-3 text-sm sm:text-base leading-relaxed w-full md:w-3/4">I am currently pursuing a degree in Informatics Engineering at ITB, where I am honing my skills 
-            in various fields within computer science. My academic focus is primarily on Software Engineering, particularly on Web Development, and also currently growing my skills on Data Analytics
+          <p className="text-zinc-900 dark:text-gray-300 py-3 text-sm sm:text-base leading-relaxed w-full md:w-3/4 transition-colors duration-300">I am currently pursuing a degree in Informatics Engineering at ITB, where I am honing my skills 
+            in various fields within computer science. My academic focus is primarily on Software Engineering, particularly on Full Stack Web Development, and also currently growing my skills on Data Analytics
             .</p>
           <div className="flex justify-start mt-2 mb-8">
             <a
-              href=""
+              href="/Muhammad Aufa Farabi CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-black hover:bg-gray-800 text-white rounded-md font-semibold text-center py-3 px-2 text-sm sm:text-base">
+              className="inline-block bg-black dark:bg-gray-800 hover:bg-gray-800 dark:hover:bg-gray-700 text-white rounded-md font-semibold text-center py-3 px-2 text-sm sm:text-base transition-all duration-300 transform hover:scale-105">
                 see my resume
             </a>
           </div>

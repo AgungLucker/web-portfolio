@@ -27,7 +27,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col bg-white pb-12 font-playfair">
+    <main className="flex min-h-screen flex-col bg-white dark:bg-gray-950 pb-12 font-playfair transition-colors duration-300">
       <Navbar />
       <Hero />
       <TechStack />

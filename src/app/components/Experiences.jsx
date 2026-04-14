@@ -1,70 +1,61 @@
 import React from "react";
 import ExperiencesCard from "./ExperiencesCard";
+import { useScrollReveal } from "../hooks/useScrollReveal";
+
+const experiencesData = [
+    {
+        job: "Telkomsel",
+        role: "Intern Software Developer",
+        duration: "Jan 2026 - Feb 2026",
+        type: "Work Experience",
+        description: "Researched AI-driven SDLC frameworks and deployed a full-stack LMS using Vite, Express.js, and AWS S3 with CI/CD integration."
+    },
+    {
+        job: "Computational Thinking ITB",
+        role: "Practicum Assistant",
+        duration: "Sept 2025 - Dec 2025",
+        type: "Work Experience",
+        description: "Supervised practicum sessions for 60+ students and evaluated student submissions with structured feedback for final assessments."
+    },
+    {
+        job: "HMIF ITB",
+        role: "Staff of Career Development Division",
+        duration: "July 2025 - Now",
+        type: "Volunteer Experience",
+        description: "Managing career-related programs and development initiatives for informatics students at ITB."
+    },
+    {
+        job: "Olimpiade KM ITB",
+        role: "Staff of Extracampus Division",
+        duration: "Sept 2024 - Oct 2024",
+        type: "Volunteer Experience",
+        description: "Coordinated external campus relations and student participation for major university-wide competitions."
+    },
+];
 
 const Experiences = () => {
-    const experiences = [
-        {
-            job: "HMIF ITB",
-            role: "Staff of Career Development Division",
-            duration: "July 2025 - Now"
-        },
-        {
-            job: "Olimpiade KM ITB",
-            role: "Staff of Extracampus Division",
-            duration: "September 2024 - October 2024"
-        },
-        {
-            job: "STEI-Kesyen",
-            role: "Staff of Acomodation Division",
-            duration: "April 2024 - May 2024",
-        },
-
-    ]
+    const revealRef = useScrollReveal();
 
   return (
-    <section id="Experiences" className=" h-auto py-6 mt-8 md:px-5 md:pt-10">
-        <div className="grid grid-cols-1 md:grid-cols-8 gap-6 w-full mx-auto px-6 md:px-12">
-            <div id="Education" className="col-span-1 md:col-span-5 flex flex-col gap-3">
-                <h2 className="font-semibold text-zinc-900">
-                    Education
-                </h2>
-                <div className="space-y-1 py-4 border-t border-gray-600">
-                    <div className="flex flex-wrap items-center gap-1 md:gap-3">
-                        <p className="font-semibold md:text-lg text-zinc-800">Institut Teknologi Bandung</p>
-                        <p className="text-sm text-neutral-600">Undergraduate College</p>
-                    </div>
-                    <p className="underline text-zinc-700">Informatics Engineering</p>
-                    <p className="text-neutral-600">August 2023 - Now </p>
-                </div>
-                <div className="space-y-1 py-4 border-t border-gray-600">
-                    <div className="flex flex-wrap items-center gap-1 md:gap-3">
-                        <p className="font-semibold md:text-lg text-zinc-800">SMAN 71 JAKARTA</p>
-                        <p className="text-sm text-neutral-600">Senior High School</p>
-                    </div>
-                    <p className="underline text-zinc-700">Natural Science</p>
-                    <p className="text-neutral-600">July 2020 - June 2023 </p>
-                </div>
+    <section id="Experiences" ref={revealRef} className="reveal h-auto py-16 px-6 md:px-24 transition-colors duration-300">
+        <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-black dark:text-white mb-12 transition-colors duration-300">
+                Work & Volunteer <span className="text-red-600 dark:text-red-500">EXPERIENCES</span>
+            </h2>
+            <div className="flex flex-col">
+                {experiencesData.map((exp, index) => (
+                    <ExperiencesCard 
+                        key={index}
+                        job={exp.job}
+                        role={exp.role}
+                        duration={exp.duration}
+                        type={exp.type}
+                        description={exp.description}
+                        isLast={index === experiencesData.length - 1}
+                    />
+                ))}
             </div>
-            <div id="Experience" className="lg:ml-10 md:col-span-3 rounded-xl p-5 shadow-lg border border-zinc-300">
-                <h2 className="font-semibold text-zinc-900">
-                    Experiences
-                </h2>
-                <div>
-                    {experiences.map((exp, index) => {
-                        return (
-                        <ExperiencesCard 
-                            key={index}
-                            job={exp.job}
-                            role={exp.role}
-                            duration={exp.duration}/>
-                    )})}
-                </div>
-            </div>
-
-
         </div>
-
-
     </section>
   );
 };
