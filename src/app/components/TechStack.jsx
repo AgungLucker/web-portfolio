@@ -4,15 +4,15 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 const techCategories = [
   {
     label: "Programming Languages",
-    techs: ["Python", "JavaScript", "Java", "C", "C++"],
+    techs: ["Python", "JavaScript", "Java", "C", "C++, PHP, Go, Kotlin"],
   },
   {
     label: "Frontend Development",
-    techs: ["HTML", "CSS", "React", "Next.js", "Tailwind CSS"],
+    techs: ["HTML", "CSS", "React", "Next.js", "Tailwind",],
   },
   {
     label: "Backend Development",
-    techs: ["Node.js", "Express.js", "REST API"],
+    techs: ["Node.js", "Express.js", "FastAPI"],
   },
   {
     label: "Data Science",
@@ -20,11 +20,11 @@ const techCategories = [
   },
   {
     label: "Database",
-    techs: ["MySQL", "MongoDB", "PostgreSQL"],
+    techs: ["MySQL", "MongoDB", "PostgreSQL", "SQLite", "Prisma"],
   },
   {
     label: "Tools",
-    techs: ["Git", "GitHub", "Docker", "Jest", "VS Code", "Postman"],
+    techs: ["Git", "GitHub", "Docker", "Swagger", "Jest", "VS Code", "Postman"],
   },
 ];
 
