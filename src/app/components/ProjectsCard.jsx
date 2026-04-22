@@ -23,7 +23,7 @@ const ProjectsCard = ({ imgURL, title, desc, techStack, tab, github }) => {
   return (
     <div
       onClick={handleCardClick}
-      className="w-full rounded-lg overflow-hidden mx-auto shadow-md dark:shadow-xl hover:shadow-xl dark:hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 transform cursor-pointer group bg-white dark:bg-gray-800"
+      className="w-full rounded-xl overflow-hidden mx-auto shadow-md dark:shadow-xl hover:shadow-xl dark:hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 transform cursor-pointer group bg-[#f0f0e0] dark:bg-gray-800 h-full flex flex-col"
     >
       {/* Image Container with Overlay */}
       <div
@@ -42,16 +42,18 @@ const ProjectsCard = ({ imgURL, title, desc, techStack, tab, github }) => {
       </div>
 
       {/* Content */}
-      <div className="pt-5 pb-4 pl-5 pr-5 text-black dark:text-white flex flex-col justify-start h-auto transition-colors duration-300">
-        {/* Title */}
-        <h3 className="text-lg font-semibold leading-tight mb-2">{title}</h3>
+      <div className="pt-5 pb-4 pl-5 pr-5 text-black dark:text-white flex flex-col justify-between flex-1 transition-colors duration-300">
+        <div>
+          {/* Title */}
+          <h3 className="text-lg font-semibold leading-tight mb-2">{title}</h3>
 
-        {/* Description */}
-        <p className="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">{desc}</p>
+          {/* Description */}
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{desc}</p>
+        </div>
 
         {/* Tech Stack Badges */}
         {techStack && techStack.length > 0 && (
-          <div className="flex flex-wrap gap-2 mt-auto">
+          <div className="flex flex-wrap gap-2 pt-2">
             {techStack.map((tech, index) => (
               <span
                 key={index}

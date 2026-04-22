@@ -79,7 +79,7 @@ html.dark {
 }
 
 html.dark body {
-  background: linear-gradient(to bottom, #0f172a, #1e293b);
+  background: linear-gradient(to bottom, #0c0b09, #14110f);
 }
 
 html.dark section {
@@ -87,11 +87,11 @@ html.dark section {
 }
 
 html.dark .bg-\[rgb\(230\,232\,221\)\] {
-  @apply bg-gray-900;
+  @apply bg-slate-950;
 }
 
 html.dark .bg-\[\#fafbf5\] {
-  @apply bg-gray-950;
+  background-color: #110f0d;
 }
 
 html.dark .text-cyan-950 {

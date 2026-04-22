@@ -5,35 +5,35 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 const ProjectsData = [
   {
     id: 1,
-    title: "Pokemon-like Fighting Game",
-    description: "A Pokemon-like turn-based fighting game in CLI",
-    image: "/images/O.W.C.A.png",
+    title: "Nimons360",
+    description: "Real Time Family Location Sharing and Tracking Android App allowing users to manage their family groups and share their real-time location with family members via in-built map and livestream feature",
+    image: "/images/Nimons360.png",
     tab: ["Projects"],
-    techStack: ["Python"],
-    github: "https://github.com/AgungLucker/Pokemon-Game",
+    techStack: ["Kotlin", "Jetpack Compose"],
+    github: "https://github.com/AgungLucker/Nimons360---Tugas-Besar-Mobile-App-Development",
   },
   {
     id: 2,
-    title: "Matrix Calculator and Image Resizer",
-    description: "Matrix Calculator App for Linear Algebra and Image Resizing application with GUI",
-    image: "/images/matrix.png",
+    title: "Nimonspedia",
+    description: "Web E-commerce and Auctions App Project featuring Seller and Buyer functionalities including product listing, shopping cart, order management, and real-time chat and auctions",
+    image: "/images/Nimonspedia.png",
     tab: ["Projects"],
-    techStack: ["Java"],
-    github: "https://github.com/AgungLucker/Matrix-Calculator",
+    techStack: ["PHP", "React", "Typescript", "Expressjs", "Docker", "Nginx"],
+    github: "https://github.com/AgungLucker/Nimonspedia-Tugas-Besar-WBD",
   },
   {
     id: 3,
-    title: "Tasklink",
-    description: "A task management app with built-in calendar",
-    image: "/images/Tasklink.png",
+    title: "Shuzzam",
+    description: "Music recognition app that can identify songs by album song cover and audio humming, utilized PCA based process to find the similiar song album and Music information retrieval (MIR) techniques to extract audio features",
+    image: "/images/Shuzzam.png",
     tab: ["Projects"],
-    techStack: ["React", "Nextjs", "Tailwind"],
-    github: "https://github.com/AgungLucker/Sparta-Milestone-Project",
+    techStack: ["Typescript", "Nextjs", "Python"],
+    github: "https://github.com/AgungLucker/Shuzzam",
   },
     {
     id: 4,
     title: "WebBrewery",
-    description: "Little Alchemy 2 recipe finder and visualizer app",
+    description: "Little Alchemy 2 recipe finder and visualizer app that implements BFS and DFS to construct the recipe tree solution",
     image: "/images/WebBrewery.png",
     tab: ["Projects"],
     techStack: ["React", "Go", "Tailwind"],
@@ -63,9 +63,10 @@ const Activities = () => {
     <section 
       id="Projects" 
       ref={revealRef}
-      className="reveal h-auto bg-[#fafbf5] dark:bg-gray-950 rounded-t-[3%] rounded-b-[3%] md:rounded-t-[60px] md:rounded-b-[60px] px-4 pb-5 md:px-10 md:py-10 mt-12 mb-12 transition-colors duration-300"
+      className="reveal h-auto bg-[#fafbf5] dark:bg-gray-950 rounded-t-[3%] rounded-b-[3%] md:rounded-t-[60px] md:rounded-b-[60px] px-5 sm:px-6 md:px-10 py-8 md:py-10 mt-12 mb-12 transition-colors duration-300"
     >
-      <h2 className="text-center text-3xl md:text-5xl font-bold text-black dark:text-white mt-4 pt-2 py-4 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-center text-3xl md:text-5xl font-bold text-black dark:text-white mt-6 pt-2 py-4 transition-colors duration-300">
       recent  <span className="text-red-600 dark:text-red-500 transition-colors duration-300">PROJECTS</span></h2>
       <p className="text-center text-lg font-medium text-[#604b4b] dark:text-gray-400 pb-2 mb-4 transition-colors duration-300" >Here are some of projects i&#39;ve worked on</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -81,8 +82,7 @@ const Activities = () => {
         ))}
 
       </div>
-  
-
+      </div>
     </section>
   )
 }

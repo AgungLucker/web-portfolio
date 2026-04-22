@@ -41,7 +41,7 @@ const Navbar = () => {
       setIsOpen(false); // Close mobile menu after click
     };
   return (
-    <nav className="fixed top-7 lg:left-1/2 transform -translate-x-1/2  right-0 backdrop-blur border border-b-3 border-[#9b9898] dark:border-gray-700 max-w-3xl  w-[30%] lg:w-[40%] h-[60px] rounded-full shadow-lg bg-white dark:bg-gray-950 bg-opacity-60 dark:bg-opacity-60 z-10 transition-all duration-300">
+    <nav className="fixed top-7 lg:left-1/2 transform -translate-x-1/2  right-0 backdrop-blur-md border border-b-3 border-[#9b9898] dark:border-gray-700 max-w-3xl  w-[30%] lg:w-[40%] h-[60px] rounded-full shadow-lg bg-white/60 dark:bg-gray-950/60 z-10 transition-all duration-300">
         <div className="flex justify-center items-center p-4 mx-auto">
             <div id="hamburger" className="lg:hidden flex items-center">
                 <button className="text-gray-500 dark:text-gray-400 focus:outline-none " onClick={toggleMenu}>
@@ -84,7 +84,7 @@ const Navbar = () => {
             </div>
 
         </div>
-        <div id="menu-mobile" className={`lg:hidden flex flex-col items-center ${isOpen ? "flex" : "hidden"} bg-white dark:bg-gray-950 bg-opacity-60 dark:bg-opacity-60 border border-gray-700 dark:border-gray-700 rounded-lg w-full mt-1.5 h-auto pb-2 transition-all duration-300`}>
+        <div id="menu-mobile" className={`lg:hidden flex flex-col items-center ${isOpen ? "flex" : "hidden"} bg-white/60 dark:bg-gray-950/60 border border-gray-700 dark:border-gray-700 rounded-lg w-full mt-1.5 h-auto pb-2 transition-all duration-300`}>
             <a href="#Hero" onClick={(e) => handleSmoothScroll(e, 'Hero')} className="underline text-black dark:text-white text-sm md:text-base md:py-1 border-b dark:border-gray-700 transition-colors duration-300 cursor-pointer">Home</a>
             <a href="#Projects" onClick={(e) => handleSmoothScroll(e, 'Projects')} className="underline text-black dark:text-white text-sm md:text-base md:py-1 dark:border-gray-700 transition-colors duration-300 cursor-pointer">Projects</a>
             <a href="#Experiences" onClick={(e) => handleSmoothScroll(e, 'Experiences')} className="underline text-black dark:text-white text-sm md:text-base md:py-1 dark:border-gray-700 transition-colors duration-300 cursor-pointer">Experiences</a>

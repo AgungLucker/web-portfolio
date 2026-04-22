@@ -1,72 +1,94 @@
-import React from "react"
-import Image from "next/image";
+import React from "react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
-import HTMLIcon from "../../../public/html-1.svg"
-import CSSIcon from "../../../public/css-3.svg"
-import JSIcon from "../../../public/logo-javascript.svg"
-import ReactIcon from "../../../public/react.svg"
-import TailwindCSSIcon from "../../../public/tailwind-css-2.svg"
-import PythonIcon from "../../../public/python-5.svg"
-import CIcon from "../../../public/c-1.svg"
-import JavaIcon from "../../../public/java-4.svg"
-import NextJSIcon from "../../../public/next-js.svg"
-import nodeJsIcon from "../../../public/nodejs.svg"
-import Cplus2 from "../../../public/cplus2.svg"
-import mySQLIcon from "../../../public/mysql.svg"
-import MongoDBIcon from "../../../public/mongodb.svg"
 
-const techStacks = [
-  {name: "HTML", icon:HTMLIcon},
-  {name: "CSS", icon:CSSIcon},
-  {name: "Javascript", icon:JSIcon},
-  {name: "Tailwind", icon:TailwindCSSIcon},
-  {name: "React", icon:ReactIcon},
-  {name: "Next.js", icon:NextJSIcon},
-  {name: "Python", icon:PythonIcon},
-  {name: "C", icon:CIcon},
-  {name: "Java", icon:JavaIcon},
-  {name: "C++", icon:Cplus2},
-  {name: "Node.js", icon:nodeJsIcon},
-  {name: "MySQL", icon:mySQLIcon},
-  {name: "MongoDB", icon:MongoDBIcon},
+const techCategories = [
+  {
+    label: "Programming Languages",
+    techs: ["Python", "JavaScript", "Java", "C", "C++"],
+  },
+  {
+    label: "Frontend Development",
+    techs: ["HTML", "CSS", "React", "Next.js", "Tailwind CSS"],
+  },
+  {
+    label: "Backend Development",
+    techs: ["Node.js", "Express.js", "REST API"],
+  },
+  {
+    label: "Data Science",
+    techs: ["Pandas", "NumPy", "Matplotlib", "Scikit-learn"],
+  },
+  {
+    label: "Database",
+    techs: ["MySQL", "MongoDB", "PostgreSQL"],
+  },
+  {
+    label: "Tools",
+    techs: ["Git", "GitHub", "Docker", "Jest", "VS Code", "Postman"],
+  },
 ];
+
 const TechStack = () => {
   const revealRef = useScrollReveal();
 
   return (
-    <section id="About" ref={revealRef} className="reveal h-auto px-4 md:px-10 py-2 mb-12 mt-12 transition-colors duration-300">
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center py-4 px-16">
-        <div className="col-span-full mt-4 md:mt-0 text-left flex flex-col ">
+    <section
+      id="About"
+      ref={revealRef}
+      className="reveal h-auto px-4 md:px-10 py-2 mb-12 mt-12 transition-colors duration-300"
+    >
+      <div className="py-4 px-4 md:px-16">
+        <div className="mt-4 md:mt-0 text-left flex flex-col">
           <div className="text-black dark:text-white mt-8 transition-colors duration-300">
-              <h3 className=" font-bold text-3xl md:text-5xl mb-8">My <span className="text-orange-500 dark:text-orange-400 transition-colors duration-300">Tech Stack</span></h3>
-              <div className="flex flex-wrap gap-3 font-semibold">
 
-                {techStacks.map((tech, index) => (
-                  <div
-                    key={index}
-                    className="bg-gray-300 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg p-2 flex items-center w-full sm:w-1/2 md:w-1/5 transition-all duration-300 transform hover:scale-105 cursor-pointer"
-                    >
-                      <div className="w-[30px] h-[30px] overflow-hidden flex justify-center items-center">
-                        <Image
-                        src={tech.icon}
-                        alt={`${tech.name} Icon`}
-                        width={30}
-                        height={30}
-                        className="object-cover transition-transform duration-300 hover:scale-110"
-                        />
-                      </div>
-                    <p className="ml-2 text-xs lg:text-sm text-black dark:text-white transition-colors duration-300">{tech.name}</p>
+            <h3 className="font-bold text-3xl md:text-5xl mb-10">
+              My{" "}
+              <span className="text-orange-500 dark:text-orange-400 transition-colors duration-300">
+                Tech Stack
+              </span>
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 rounded-[32px] border border-gray-200 dark:border-gray-700 bg-white/80 dark:bg-slate-950/80 shadow-sm dark:shadow-black/20">
+              {techCategories.map((category, catIndex) => (
+                <div key={catIndex} className="space-y-4">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-widest text-gray-700 dark:text-gray-300 mb-3 transition-colors duration-300">
+                      {category.label}
+                    </p>
+                    <div className="h-px w-12 bg-gray-300 dark:bg-gray-600 mb-4" />
                   </div>
-                ))}
-              </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    {category.techs.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="
+                          px-4 py-1.5
+                          rounded-full
+                          text-sm font-medium
+                          bg-gray-200 dark:bg-gray-700
+                          text-gray-700 dark:text-gray-200
+                          border border-gray-300 dark:border-gray-600
+                          hover:border-orange-400 dark:hover:border-orange-400
+                          hover:text-orange-500 dark:hover:text-orange-400
+                          hover:bg-orange-50 dark:hover:bg-orange-900/10
+                          transition-all duration-200 cursor-default
+                          select-none
+                        "
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
 
           </div>
-
         </div>
       </div>
     </section>
-  )
-}
-
+  );
+};
 
 export default TechStack;
