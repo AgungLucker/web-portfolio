@@ -63,13 +63,13 @@ const Activities = () => {
     <section 
       id="Projects" 
       ref={revealRef}
-      className="reveal h-auto bg-[#fafbf5] dark:bg-gray-950 rounded-t-[3%] rounded-b-[3%] md:rounded-t-[60px] md:rounded-b-[60px] px-5 sm:px-6 md:px-10 py-8 md:py-10 mt-12 mb-12 transition-colors duration-300"
+      className="reveal bg-surface dark:bg-surface-dark rounded-[36px] mx-4 px-6 py-[70px] transition-colors duration-300"
     >
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-center text-3xl md:text-5xl font-bold text-black dark:text-white mt-6 pt-2 py-4 transition-colors duration-300">
-      recent  <span className="text-red-600 dark:text-red-500 transition-colors duration-300">PROJECTS</span></h2>
-      <p className="text-center text-lg font-medium text-[#604b4b] dark:text-gray-400 pb-2 mb-4 transition-colors duration-300" >Here are some of projects i&#39;ve worked on</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-[1080px] mx-auto">
+        <h2 className="text-center text-3xl md:text-5xl font-extrabold text-heading dark:text-heading-dark transition-colors duration-300">
+      recent  <span className="text-accent dark:text-accent-dark transition-colors duration-300">PROJECTS</span></h2>
+      <p className="text-center text-base text-muted dark:text-muted-dark mt-2.5 mb-10 transition-colors duration-300" >Here are some of the projects I&#39;ve worked on</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
         {filteredProjects.map((project) => (
           <ProjectsCard
             key={project.id}

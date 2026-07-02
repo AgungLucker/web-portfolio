@@ -6,6 +6,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Offset anchor scrolling so the floating navbar doesn't cover the section title */
+section[id] {
+  scroll-margin-top: 100px;
+}
+
 /* Scroll Reveal Animations */
 @keyframes fadeInUp {
   from {
@@ -84,47 +89,6 @@ html.dark body {
 
 html.dark section {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-html.dark .bg-\[rgb\(230\,232\,221\)\] {
-  @apply bg-slate-950;
-}
-
-html.dark .bg-\[\#fafbf5\] {
-  background-color: #110f0d;
-}
-
-html.dark .text-cyan-950 {
-  @apply text-white;
-}
-
-html.dark .text-zinc-900 {
-  @apply text-gray-200;
-}
-
-html.dark .text-\[#604b4b\] {
-  @apply text-gray-400;
-}
-
-html.dark .text-black {
-  @apply text-white;
-}
-
-html.dark .text-gray-500 {
-  @apply text-gray-400;
-}
-
-html.dark .bg-white {
-  @apply bg-gray-800;
-}
-
-html.dark .border-gray-300 {
-  @apply border-gray-600;
-}
-
-html.dark .shadow-md {
-  @apply shadow-lg;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 @layer utilities {

@@ -23,7 +23,7 @@ const ProjectsCard = ({ imgURL, title, desc, techStack, tab, github }) => {
   return (
     <div
       onClick={handleCardClick}
-      className="w-full rounded-xl overflow-hidden mx-auto shadow-md dark:shadow-xl hover:shadow-xl dark:hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 transform cursor-pointer group bg-[#f0f0e0] dark:bg-gray-800 h-full flex flex-col"
+      className="w-full rounded-2xl overflow-hidden mx-auto shadow-[0_4px_18px_rgba(0,0,0,0.08)] dark:shadow-[0_4px_18px_rgba(0,0,0,0.35)] hover:-translate-y-1 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 transform cursor-pointer group bg-projectcard dark:bg-projectcard-dark h-full flex flex-col"
     >
       {/* Image Container with Overlay */}
       <div
@@ -42,22 +42,22 @@ const ProjectsCard = ({ imgURL, title, desc, techStack, tab, github }) => {
       </div>
 
       {/* Content */}
-      <div className="pt-5 pb-4 pl-5 pr-5 text-black dark:text-white flex flex-col justify-between flex-1 transition-colors duration-300">
+      <div className="pt-5 pb-4 px-5 text-heading dark:text-heading-dark flex flex-col justify-between flex-1 transition-colors duration-300">
         <div>
           {/* Title */}
-          <h3 className="text-lg font-semibold leading-tight mb-2">{title}</h3>
+          <h3 className="text-lg font-bold leading-tight mb-2.5">{title}</h3>
 
           {/* Description */}
-          <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{desc}</p>
+          <p className="text-sm text-muted dark:text-muted-dark leading-relaxed mb-3">{desc}</p>
         </div>
 
         {/* Tech Stack Badges */}
         {techStack && techStack.length > 0 && (
-          <div className="flex flex-wrap gap-2 pt-2">
+          <div className="flex flex-wrap gap-1.5 pt-2">
             {techStack.map((tech, index) => (
               <span
                 key={index}
-                className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 transition-colors duration-300"
+                className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-pill dark:bg-pill-dark text-pilltext dark:text-pilltext-dark transition-colors duration-300"
               >
                 {tech}
               </span>

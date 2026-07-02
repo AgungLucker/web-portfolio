@@ -37,10 +37,10 @@ const Experiences = () => {
     const revealRef = useScrollReveal();
 
   return (
-    <section id="Experiences" ref={revealRef} className="reveal h-auto py-16 px-6 md:px-24 transition-colors duration-300">
-        <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-black dark:text-white mb-12 transition-colors duration-300">
-                Work & Volunteer <span className="text-red-600 dark:text-red-500">EXPERIENCES</span>
+    <section id="Experiences" ref={revealRef} className="reveal py-20 px-6 flex justify-center transition-colors duration-300">
+        <div className="max-w-[900px] w-full">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-heading dark:text-heading-dark mb-12 transition-colors duration-300">
+                Work &amp; Volunteer <span className="text-accent dark:text-accent-dark">EXPERIENCES</span>
             </h2>
             <div className="flex flex-col">
                 {experiencesData.map((exp, index) => (
