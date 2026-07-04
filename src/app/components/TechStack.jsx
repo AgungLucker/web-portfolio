@@ -12,19 +12,19 @@ const techCategories = [
   },
   {
     label: "Backend Development",
-    techs: ["Node.js", "Express.js", "FastAPI"],
+    techs: ["Node.js", "Express.js", "FastAPI", "Restful APIs", "GraphQL"],
   },
   {
     label: "Data Science",
-    techs: ["Pandas", "NumPy", "Matplotlib", "Scikit-learn"],
+    techs: ["Pandas", "NumPy", "Matplotlib", "Scikit-learn", "Keras"],
   },
   {
-    label: "Database",
+    label: "Databases and ORMs",
     techs: ["MySQL", "MongoDB", "PostgreSQL", "SQLite", "Prisma"],
   },
   {
     label: "Tools",
-    techs: ["Git", "GitHub", "Docker", "Swagger", "Jest", "VS Code", "Postman"],
+    techs: ["Git", "GitHub", "Docker", "Swagger", "Jest", "VS Code", "Postman", "Nginx"],
   },
 ];
 

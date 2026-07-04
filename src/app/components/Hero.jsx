@@ -21,8 +21,8 @@ const Hero = () => {
         <p className="text-accent dark:text-accent-dark font-bold text-base sm:text-lg min-h-[28px] transition-colors duration-300">
           <TypeAnimation
             sequence={[
-              "Software Developer", 3000,
-              "3rd Year Informatics Student at ITB", 3000,
+              "Software Engineer", 3000,
+              "Lifelong Learner", 3000,
             ]}
             wrapper="span"
             speed={70}
@@ -30,7 +30,7 @@ const Hero = () => {
           />
         </p>
         <p className="text-body dark:text-body-dark text-base sm:text-lg leading-relaxed max-w-[620px] transition-colors duration-300">
-          Third-year Informatics Engineering student at ITB. I mostly build things for web and mobile, but I like poking around data analysis, machine learning, distributed systems, and Artificial Intelligence whenever I get the chance.
+          3rd Informatics Engineering student at ITB. Mostly develop things for web and mobile, but I also keen poking and learning around data analysis, machine learning, distributed systems, and Artificial Intelligence whenever I get the chance.
         </p>
         <a
           href="/Muhammad Aufa Farabi CV.pdf"
